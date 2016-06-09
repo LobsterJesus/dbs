@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+	<head>
+		<title>Spitalverwaltung</title>
+                <link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+            <h1>Spitalverwaltung</h1>
+            <div class="menu">
+    <h3>Patienten</h3>
+    <ul>
+            <li><a href="index.jsp?menu=patient_list">Patienten suchen/auflisten</a></li>
+            <li><a href="index.jsp?menu=patient_new">Patienten anlegen</a></li>
+    </ul>
+    <h3>Behandlungen</h3>
+    <ul>
+            <li><a href="index.jsp?menu=treatment_list">Behandlung suchen/auflisten</a></li>
+            <li><a href="index.jsp?menu=treatment_new">Behandlung anlegen</a></li>
+    </ul>
+    <br />
+    <a href="index.jsp">Zur Startseite</a>
+</div>
+            <div class="content">
+                
+                    
+
+
+
+<fmt:requestEncoding value="UTF-8" />
+
+
+
+
+    
+    <div class="statbar ok">
+        Person wurde gespeichert (<a href="index.jsp?menu=treatment_list" target="_top">zur Liste</a>)
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Neue Behandlung anlegen</h2>
+    
+<form class="newrecord" action="index.jsp?menu=treatment_new&create=1" method="post" target="_top" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+    <div class="row">
+        <label for="type">Typ</label>
+        <select name="type">
+            
+                <option value="BH01">BH01</option>
+            
+                <option value="BH02">BH02</option>
+            
+                <option value="BH03">BH03</option>
+            
+        </select>
+    </div>
+    <div class="row">
+        <label for="room">Raum</label>
+        <select name="room">
+            
+                <option value="R001">Raum 1</option>
+            
+                <option value="R002">Raum 2</option>
+            
+                <option value="R003">Raum 3</option>
+            
+                <option value="R004">Raum 4</option>
+            
+        </select>
+    </div>
+    <div class="row">
+        <label for="person">Sachbearbeiter</label>
+        <select name="person">
+            
+                <option value="1111">Markus Eggenberger</option>
+            
+                <option value="2222">Thomas Oberleitner</option>
+            
+        </select>
+    </div>
+    <div class="row">
+        <label for="time">Zeit</label>
+        <select name="time">
+            <option value="2016-12-12 09:00:00">09:00</option>
+            <option value="2016-12-12 09:30:00">09:30</option>
+            <option value="2016-12-12 10:00:00">10:00</option>
+            <option value="2016-12-12 10:30:00">10:30</option>
+            <option value="2016-12-12 11:00:00">11:00</option>
+            <option value="2016-12-12 11:30:00">11:30</option>
+            <option value="2016-12-12 12:00:00">12:00</option>
+            <option value="2016-12-12 12:30:00">12:30</option>
+            <option value="2016-12-12 13:00:00">13:00</option>
+            <option value="2016-12-12 13:30:00">13:30</option>
+        </select>
+    </div>
+    <br/>
+    <div class="row">
+        <input 
+            type="checkbox" 
+            style="width: auto; float: none;" 
+            name="createAppointment" 
+            value="1"
+            onclick="document.getElementById('appointment').style.display = (this.checked ? 'block' : 'none');"> Vormerkung für Patient erstellen<br>
+    </div>
+    <div id="appointment" style="display: none;">
+        <div class="row">
+            <label for="patient">Patient</label>
+             <select name="patient">
+                
+                    <option value="5557">Max Mustermann</option>
+                
+                    <option value="9999">Test Testermann</option>
+                
+                    <option value="1111">Markus Eggenberger</option>
+                
+                    <option value="2222">Thomas Oberleitner</option>
+                
+                    <option value="3333">Sabrina Stummer </option>
+                
+                    <option value="4444">Kacper Wieczorek</option>
+                
+            </select>
+        </div>
+        <div class="row">
+            <label for="doctor">Arzt</label>
+             <select name="doctor">
+                
+                    <option value="2222">Dr. Thomas Oberleitner</option>
+                
+                    <option value="3333">Dr. Sabrina Stummer </option>
+                
+            </select>
+        </div>
+        <div class="row">
+            <label for="appDate">Datum</label>
+            <select name="appDate">
+                <option value="2016-12-01 00:00:00">01.12.2016</option>
+                <option value="2016-12-02 09:30:00">02.12.2016</option>
+                <option value="2016-12-03 10:00:00">03.12.2016</option>
+                <option value="2016-12-04 10:30:00">04.12.2016</option>
+                <option value="2016-12-05 11:00:00">05.12.2016</option>
+                <option value="2016-12-06 11:30:00">06.12.2016</option>
+                <option value="2016-12-07 12:00:00">07.12.2016</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="row button">
+        <input type="submit" value="Anlegen">
+    </div>
+</form>
+
+                
+                
+            </div>
+	</body>
+</html>

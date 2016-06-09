@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    color: #5BC6D0;
+    font-style: italic;
+    border-bottom: 1px dotted #5BC6D0;
+}
+
+h2 {
+    margin: 0 0 20px 0;
+}
+
+div.menu {
+    position: absolute;
+    left: 15;
+    top: 120px;
+    width: 250px;
+}
+
+div.menu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin: 0 0 40px 0;
+}
+
+div.menu > h3 {
+    margin: 0 0 10px 0;
+}
+
+div.menu a {
+    display: block;
+    width: 230px;
+    background-color: #5BC6D0;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 3px;
+    padding: 4px 5px;
+}
+div.menu a:hover {
+    text-decoration: underline;
+}
+
+div.content {
+    position: absolute;
+    left: 285px;
+    top: 120px;
+}
+
+form.filter {
+    margin: 0 0 15px 0;
+    width: 700px;
+    text-align: right;
+}
+
+table.list {
+    width: 800px;
+    border: 2px dotted #5BC6D0;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+table.list tr:nth-child(even) {
+    background-color: #5BC6D0;
+    color: white;
+}
+
+table.list tr td {
+    padding: 3px;
+
+}
+
+form.newrecord {
+    width: 700px;
+    border: 2px dotted #5BC6D0;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+form.newrecord label {
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+form.newrecord input,
+form.newrecord select {
+    float: left;
+    width: 300px;
+}
+
+form.newrecord div.row {
+    margin-bottom: 5px;
+    height: 25px;
+}
+
+form.newrecord .row.button {
+    margin-top: 20px;
+    text-align: right;
+}
+
+form.newrecord .row.button > input {
+    width: 100px;
+    background-color: #5BC6D0;
+    color: white;
+    padding: 4px;
+    border: none;
+    height: 30px;
+    float: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div.statbar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 25px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+div.statbar a {
+    color: white;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+div.statbar.ok {
+    background-color: green;
+}
+
+div.statbar.err {
+    background-color: red;
+}
